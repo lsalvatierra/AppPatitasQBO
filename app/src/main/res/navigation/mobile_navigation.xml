@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_lista_mascota">
+    <fragment
+        android:id="@+id/nav_lista_mascota"
+        android:name="qboinstitute.com.apppatitasqbo.ui.ListaMascotaFragment"
+        android:label="@string/vallistmascota"
+        tools:layout="@layout/fragment_lista_mascota" />
+    <fragment
+        android:id="@+id/nav_voluntario"
+        android:name="qboinstitute.com.apppatitasqbo.ui.VoluntarioFragment"
+        android:label="@string/valvoluntario"
+        tools:layout="@layout/fragment_voluntario" />
+</navigation>
