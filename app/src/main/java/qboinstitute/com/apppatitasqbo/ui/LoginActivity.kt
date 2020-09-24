@@ -61,7 +61,7 @@ class LoginActivity : AppCompatActivity() {
             setearValoresDeRecordar(it)
         }
         btnlogin.setOnClickListener {
-            //Log.i("RECORDAR", chkrecordar.isChecked.toString())
+            btnlogin.isEnabled = false
             if(validarUsuarioPassword()){
                 AutenticarUsuarioWS(it, etusuario.text.toString(),
                     etpassword.text.toString())
@@ -130,8 +130,10 @@ class LoginActivity : AppCompatActivity() {
                 }else{
                     mostrarMensaje(vista, response.getString("mensaje"))
                 }
+                btnlogin.isEnabled = true
             }, {
                 Log.i("LOGIN", it.toString())
+                btnlogin.isEnabled = true
             })
         queue.add(request)
     }
