@@ -32,9 +32,9 @@ android {
         jvmTarget = '1.8'
     }
     //Room Kotlin
-    packagingOptions {
+    /*packagingOptions {
         exclude 'META-INF/atomicfu.kotlin_module'
-    }
+    }*/
 }
 
 dependencies {

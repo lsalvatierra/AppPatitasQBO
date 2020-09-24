@@ -77,9 +77,6 @@ class MainActivity : AppCompatActivity() {
         // archivo menu->main.xml
         val idItem = item.itemId
         if(idItem == R.id.action_cerrar){
-            val preferencias = getSharedPreferences("appPatitas", MODE_PRIVATE)
-            preferencias.edit().clear().apply()
-            personaViewModel.eliminartodo()
             startActivity(
                 Intent(this,
                 LoginActivity::class.java)

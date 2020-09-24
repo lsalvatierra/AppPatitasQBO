@@ -126,6 +126,7 @@ class LoginActivity : AppCompatActivity() {
                             MainActivity::class.java
                         )
                     )
+                    finish()
                 }else{
                     mostrarMensaje(vista, response.getString("mensaje"))
                 }
