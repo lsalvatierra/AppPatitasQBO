@@ -6,7 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import qboinstitute.com.apppatitasqbo.PersonaRepository
+import qboinstitute.com.apppatitasqbo.repository.PersonaRepository
 import qboinstitute.com.apppatitasqbo.db.PatitasRoomDatabase
 import qboinstitute.com.apppatitasqbo.db.entity.PersonaEntity
 

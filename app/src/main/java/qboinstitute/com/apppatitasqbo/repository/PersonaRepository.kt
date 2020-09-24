@@ -1,4 +1,4 @@
-package qboinstitute.com.apppatitasqbo
+package qboinstitute.com.apppatitasqbo.repository
 
 import androidx.lifecycle.LiveData
 import qboinstitute.com.apppatitasqbo.db.dao.PersonaDao
