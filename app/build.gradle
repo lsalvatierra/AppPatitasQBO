@@ -1,6 +1,8 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+//Room Kotlin
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 29
@@ -29,6 +31,10 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    //Room Kotlin
+    packagingOptions {
+        exclude 'META-INF/atomicfu.kotlin_module'
+    }
 }
 
 dependencies {
@@ -47,5 +53,11 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-
+    //Librerías de Room Kotlin
+    implementation "androidx.room:room-runtime:2.2.5"
+    kapt "androidx.room:room-compiler:2.2.5"
+    implementation "androidx.room:room-ktx:2.2.5"
+    androidTestImplementation "androidx.room:room-testing:2.2.5"
+    //Librería Volley
+    implementation 'com.android.volley:volley:1.1.1'
 }
