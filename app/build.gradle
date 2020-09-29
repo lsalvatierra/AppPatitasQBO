@@ -60,4 +60,7 @@ dependencies {
     androidTestImplementation "androidx.room:room-testing:2.2.5"
     //Librería Volley
     implementation 'com.android.volley:volley:1.1.1'
+    //Librería de Glide
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 }

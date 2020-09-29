@@ -26,6 +26,7 @@ import qboinstitute.com.apppatitasqbo.viewmodel.PersonaViewModel
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
+    //Definir estas dos variables.
     private lateinit var navView: NavigationView
     private lateinit var personaViewModel: PersonaViewModel
 

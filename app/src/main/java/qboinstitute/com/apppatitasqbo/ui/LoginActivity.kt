@@ -54,6 +54,8 @@ class LoginActivity : AppCompatActivity() {
                     }
 
                 })
+        }else{
+            personaViewModel.eliminartodo()
         }
         //Realizamos la instancia de la cola de peticiones
         queue = Volley.newRequestQueue(this)
@@ -66,11 +68,14 @@ class LoginActivity : AppCompatActivity() {
                 AutenticarUsuarioWS(it, etusuario.text.toString(),
                     etpassword.text.toString())
             }else{
+                btnlogin.isEnabled = true
                 mostrarMensaje(it, getString(R.string.msguspassword))
             }
         }
+        //Ir al registro de usuario
         btnregistrar.setOnClickListener {
             startActivity(Intent(this, RegistroActivity::class.java))
+            finish()
         }
     }
 
