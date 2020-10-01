@@ -101,6 +101,7 @@ class VoluntarioFragment : Fragment() {
         btnregvoluntario.visibility = View.GONE
         chkaceptocondiciones.visibility = View.GONE
         tvtituvoluntario.text = getString(R.string.valtvesuvoluntario)
+
     }
 
     //1. Creamos método para enviar nuestros mensajes
