@@ -33,11 +33,11 @@ class ListaMascotaFragment : Fragment() {
         val vista = inflater.inflate(R.layout.fragment_lista_mascota, container, false)
         val rvmascota : RecyclerView = vista.findViewById(R.id.rvmascota)
         rvmascota.layoutManager = LinearLayoutManager(context)
-        ListarMascotaPerdida(vista.context)
+        ListarMascotaPerdidaWS(vista.context)
         return vista
     }
 
-    fun ListarMascotaPerdida(context: Context){
+    fun ListarMascotaPerdidaWS(context: Context){
         val lstmascota : ArrayList<Mascota> = ArrayList()
         val urlwslista = "http://www.kreapps.biz/patitas/mascotaperdida.php"
         val request = JsonArrayRequest(Request.Method.GET,
