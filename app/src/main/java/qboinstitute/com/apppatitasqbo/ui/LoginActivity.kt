@@ -44,6 +44,9 @@ class LoginActivity : AppCompatActivity() {
         if(verificarValorSharedPreferences()){
             //activar checkbox recordar
             chkrecordar.isChecked = true
+            etusuario.isEnabled = false
+            etpassword.isEnabled = false
+            chkrecordar.text = "Quitar el chek para ingresar con otro usuario"
             //obtiene los datos de SQLite y los muestra en los edittext
             personaViewModel.obtener()
                 .observe(this, Observer { persona ->
@@ -86,11 +89,12 @@ class LoginActivity : AppCompatActivity() {
                 R.id.chkrecordar -> {
                     if(!checked){
                         if(verificarValorSharedPreferences()){
-                            personaViewModel.eliminartodo()
-                            etusuario.setText("")
-                            etpassword.setText("")
                             preferencias.edit().remove("recordardatos")
                                 .apply()
+                            personaViewModel.eliminartodo()
+                            etusuario.isEnabled = true
+                            etpassword.isEnabled = true
+                            chkrecordar.text = getString(R.string.valchkguardardatos)
                         }
                     }
                 }
